@@ -1,4 +1,5 @@
 import { MediaRenderer } from "@thirdweb-dev/react";
+import { Fragment } from "react";
 
 interface HeadingImage {
   src: string;
@@ -34,14 +35,13 @@ export const HeadingImage: React.FC<HeadingImage> = ({
       ) : (
         <div className="mx-auto h-full w-full">
           {src ? (
-            <>
-              {console.log("Rendering image with src:", src)}
+            <Fragment>
               <img
                 src={src}
                 alt="Rainbow Cat NFT"
                 className="h-full w-full object-contain"
               />
-            </>
+            </Fragment>
           ) : (
             <div className="flex h-full w-full items-center justify-center">
               <svg
